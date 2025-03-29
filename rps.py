@@ -3,8 +3,12 @@
 #   https://realpython.com/python-rock-paper-scissors/
 
 import random
+while True:
+user_action = input("Enter throw (rock, paper, scissors): ").lower(
+if user_action == "quit":
+print("thanks for playing!")
+break
 
-user_action = input("Enter throw (rock, paper, scissors): ")
 ai_action = random.choice(["rock", "paper", "scissors"])
 
 print(f"\nYou chose {user_action}, AI chose {ai_action}.\n")
@@ -26,3 +30,5 @@ elif user_action == "scissors":
         print("Scissors cuts paper! You win!")
     else:
         print("Rock smashes scissors! You lose.")
+else:
+print("invalid input.please choose rock, paper, or scissors.")
